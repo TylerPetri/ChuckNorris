@@ -7,14 +7,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <title>GET ME EMPLOYED</title>
 </head>
+
+<style>
+    #theBTN{
+        background-color: rgb(221, 166, 13);
+        margin:15px auto;
+        border-radius: 4px;
+        border:none;
+        height:50px;
+        width:50px;
+    }
+    #theBTN:focus {
+        outline:none
+    }
+</style>
 
 <body style="background-image: url('images/beer.jpg');">
     <nav class="navbar navbar-expand-lg" id="navbarBg">
@@ -34,74 +44,77 @@
         </div>
     </nav>
 
-    <div class="cont1 container" style="max-width:800px; max-height:400px; margin-top:200px">
-            <div class="row mx-auto" id="input">
-                <input type="text" id="bigOne" class="py-2 my-1 flex-fill" placeholder="Job description">
-            </div>
-            <div class="row d-felx justify-content-separate">
-                <div class="col-md-6 d-flex">
-                    <input type="text" class="smallOne flex-fill" placeholder="Salary ($1,000,000)">
-                </div>
-                <div class="col-md-6 d-flex">
-                    <input type="text" class="smallOne flex-fill" placeholder="Location">
-                </div>
-            </div>
-            <div class="row">
-                <input type="submit" class="btn rounded-0 mt-1" id="employment" value="GET ME EMPLOYED"></input>
-            </div>
-            
-    </div>
-    <div class="container position-absolute bottom-0"></div>
-    <div class="row">
-        <div class="col text-center">
-            <button class="btn my-3" onclick="dadJoke()" style="background-color: rgb(221, 166, 13);"><i class="fas fa-beer" style="color:rgb(255, 255, 255)"></i></button>
+    <div class="cont1 container" style="max-width:800px; margin-top:15%">
+        <div class="row mx-auto" id="input">
+            <input type="text" id="bigOne" class="py-2 my-1 flex-fill" placeholder="Job description">
         </div>
-    </div>
-        <div class="row ps-0">
-            <div class="col d-inline-flex justify-content-center" style="width:100%">
-                <img src="images/doubleTrouble.jpeg" height="100px" width="100px">
-                    <textarea id="dadd" style="min-width: 44%; resize:none; background-color: rgb(221, 166, 13); color:rgb(255, 255, 255); font-family:'Franklin Gothic Medium';"></textarea>
-                <img src="images/doubleTrouble.jpeg" height="100px" width="100px">
-                </div>
+        <div class="row d-felx justify-content-separate">
+            <div class="col-md-6 d-flex">
+                <input type="text" class="smallOne flex-fill" placeholder="Salary ($1,000,000)">
+            </div>
+            <div class="col-md-6 d-flex">
+                <input type="text" class="smallOne flex-fill" placeholder="Location">
             </div>
         </div>
         <div class="row">
-            <div class="col-md d-inline-flex justify-content-center" style="width:100%">
+            <button class="btn rounded-0 mt-1 text-align-center" type="button" id="employment">$$$$$</button>
+        </div>
+    </div>
+
+    <div class="container position-absolute bottom-0" style="max-width:100%; max-height:100%">
+        <div class="row">
+            <div class="col text-center">
+                <button id="theBTN" onclick="dadJoke()"><i class="fas fa-beer fa-2x" style="color:rgb(255, 255, 255);"></i></button>
+            </div>
+        </div>
+        <div class="row ps-0">
+            <div class="col d-inline-flex justify-content-center" style="width:100%">
+                <img src="images/doubleTrouble.jpeg" height="100px" width="100px">
+                <textarea id="dadd"
+                    style="min-width: 44%; resize:none; background-color: rgb(221, 166, 13); color:rgb(255, 255, 255); font-family:'Franklin Gothic Medium';"></textarea>
+                <img src="images/doubleTrouble.jpeg" height="100px" width="100px">
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col d-inline-flex justify-content-center" style="width:100%">
                 <img src="images/Fireworks.jpg" height="100px" width="100px">
-                <textarea id="chuckchuck" style="min-width: 44%; resize:none; background-color: rgb(221, 166, 13); color:rgb(255, 255, 255); font-family:'Franklin Gothic Medium';"></textarea>
+                <textarea id="chuckchuck"
+                    style="min-width: 44%; resize:none; background-color: rgb(221, 166, 13); color:rgb(255, 255, 255); font-family:'Franklin Gothic Medium';"></textarea>
                 <img src="images/Fireworks.jpg" height="100px" width="100px">
             </div>
         </div>
     </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
 
     <script>
-        function chuckNorris(){
+        function chuckNorris() {
 
-        fetch("https://api.chucknorris.io/jokes/random")
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-              document.getElementById('chuckchuck').textContent = `${data.value}`
-            })
-          
-    }
-    chuckNorris()
+            fetch("https://api.chucknorris.io/jokes/random")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    document.getElementById('chuckchuck').textContent = `${data.value}`
+                })
 
-        async function dadJoke(){
-            await fetch("https://icanhazdadjoke.com/",{
+        }
+        chuckNorris()
+
+        async function dadJoke() {
+            await fetch("https://icanhazdadjoke.com/", {
                 headers: {
                     'Accept': 'application/json'
                 }
             })
-                .then(function  (response){
+                .then(function (response) {
                     return response.json()
                 })
-                .then(function (data){
+                .then(function (data) {
                     document.getElementById('dadd').textContent = `${data.joke}`
                 })
         }
